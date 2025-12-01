@@ -1,0 +1,179 @@
+<section id="projetos" class="section">
+  <h2>Nossos Projetos</h2>
+  <p>Conheça os projetos artísticos desenvolvidos pelo Coletivo Corpos Falantes</p>
+  
+  <!-- Seção de ligação com obras -->
+  <div style="text-align: center; margin-bottom: 3rem; padding: 2rem; background: rgba(26, 26, 26, 0.05); border-radius: 15px;">
+    <h3 style="color: #1a1a1a; margin-bottom: 1rem;">Conheça nossas obras já realizadas</h3>
+    <p style="color: #4a4a4a; margin-bottom: 1.5rem;">Veja os espetáculos e trabalhos artísticos que nossos projetos já produziram</p>
+    <button onclick="navegarParaObras()" style="background: #1a1a1a; color: white; border: none; padding: 1rem 2rem; border-radius: 25px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='#2a2a2a'" onmouseout="this.style.background='#1a1a1a'">
+      Ver Nossas Obras
+    </button>
+  </div>
+
+  <div class="projetos-container">
+    <!-- Projeto 1: Programa VAI -->
+    <div class="projeto">
+      <div class="projeto-logo">
+        <img src="editais/programa_vai.png" alt="Logo Programa VAI">
+      </div>
+      <div class="projeto-conteudo">
+        <h3>Programa VAI</h3>
+        <div class="projeto-detalhes">
+          <div class="texto-preview">
+            <p class="projeto-descricao">O Programa de Valorização de Iniciativas Culturais (VAI), uma iniciativa da Secretaria Municipal de Cultura, é uma política pública essencial para o fomento e a democratização do acesso à cultura em São Paulo.</p>
+          </div>
+          <div class="texto-completo" style="display: none;">
+            <p class="projeto-descricao">O Programa de Valorização de Iniciativas Culturais (VAI), uma iniciativa da Secretaria Municipal de Cultura, é uma política pública essencial para o fomento e a democratização do acesso à cultura em São Paulo. Seu principal objetivo é apoiar financeiramente e tecnicamente a produção cultural de grupos e artistas independentes que vivem em áreas da cidade com pouca ou nenhuma infraestrutura cultural.</p>
+            <p style="margin-top: 0.8rem; color: #6a6a6a; font-size: 0.9rem; font-style: italic;">Anos trabalhados: 2018, 2020, 2024</p>
+          </div>
+          <button class="btn-ver-mais" onclick="toggleTexto(this)">Ver mais</button>
+        </div>
+      </div>
+    </div>
+
+      <!-- Projeto 2: ProAC Municípios -->
+    <div class="projeto">
+      <div class="projeto-logo">
+        <img src="editais/proac.png" alt="Logo ProAC Municípios">
+      </div>
+      <div class="projeto-conteudo">
+        <h3>ProAC Municípios</h3>
+        <div class="projeto-detalhes">
+          <div class="texto-preview">
+            <p class="projeto-descricao">O Programa de Ação Cultural (ProAC) Municípios 2021 foi uma iniciativa da Secretaria de Cultura e Economia Criativa do Estado de São Paulo para incentivar e democratizar o acesso à cultura no interior e no litoral paulista.</p>
+          </div>
+          <div class="texto-completo" style="display: none;">
+            <p class="projeto-descricao">O Programa de Ação Cultural (ProAC) Municípios 2021 foi uma iniciativa da Secretaria de Cultura e Economia Criativa do Estado de São Paulo para incentivar e democratizar o acesso à cultura no interior e no litoral paulista. O principal objetivo era apoiar projetos culturais em cidades com até 200 mil habitantes que não tinham a mesma infraestrutura ou volume de produção cultural da capital.</p>
+            <p style="margin-top: 0.8rem; color: #6a6a6a; font-size: 0.9rem; font-style: italic;">Anos trabalhados: 2021</p>
+          </div>
+          <button class="btn-ver-mais" onclick="toggleTexto(this)">Ver mais</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projeto 3: Centro de Referência da Dança -->
+    <div class="projeto">
+      <div class="projeto-logo">
+        <img src="editais/centro_de_dança.png" alt="Logo Centro de Referência da Dança">
+      </div>
+      <div class="projeto-conteudo">
+        <h3>Centro de Referência da Dança</h3>
+        <div class="projeto-detalhes">
+          <div class="texto-preview">
+            <p class="projeto-descricao">O Centro de Referência da Dança de São Paulo (CRD) é uma importante instituição cultural da cidade, mantida pela Secretaria Municipal de Cultura.</p>
+          </div>
+          <div class="texto-completo" style="display: none;">
+            <p class="projeto-descricao">O Centro de Referência da Dança de São Paulo (CRD) é uma importante instituição cultural da cidade, mantida pela Secretaria Municipal de Cultura. Sua principal missão é atuar como um polo de apoio, pesquisa e difusão da dança em suas mais diversas vertentes, desde as manifestações tradicionais até as contemporâneas.</p>
+            <p style="margin-top: 0.8rem; color: #6a6a6a; font-size: 0.9rem; font-style: italic;">Anos trabalhados: 2020</p>
+          </div>
+          <button class="btn-ver-mais" onclick="toggleTexto(this)">Ver mais</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projeto 4: ProESC Jundiaí -->
+    <div class="projeto">
+      <div class="projeto-logo">
+        <img src="editais/proesc.png" alt="Logo ProESC Jundiaí">
+      </div>
+      <div class="projeto-conteudo">
+        <h3>ProESC Jundiaí</h3>
+        <div class="projeto-detalhes">
+          <div class="texto-preview">
+            <p class="projeto-descricao">O Programa Municipal de Estímulo à Cultura (PROESC) de Jundiaí é uma iniciativa da Unidade de Gestão de Cultura (UGC) da prefeitura, com o objetivo de fomentar e incentivar a produção cultural local.</p>
+          </div>
+          <div class="texto-completo" style="display: none;">
+            <p class="projeto-descricao">O Programa Municipal de Estímulo à Cultura (PROESC) de Jundiaí é uma iniciativa da Unidade de Gestão de Cultura (UGC) da prefeitura, com o objetivo de fomentar e incentivar a produção cultural local.</p>
+            <p style="margin-top: 0.8rem; color: #6a6a6a; font-size: 0.9rem; font-style: italic;">Anos trabalhados: 2020</p>
+          </div>
+          <button class="btn-ver-mais" onclick="toggleTexto(this)">Ver mais</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projeto 5: 10º Circuito Vozes do Corpo -->
+    <div class="projeto">
+      <div class="projeto-logo">
+        <img src="editais/circuito_vozes.jpg" alt="Logo 10º Circuito Vozes do Corpo">
+      </div>
+      <div class="projeto-conteudo">
+        <h3>10º Circuito Vozes do Corpo da Cia Sansacroma</h3>
+        <div class="projeto-detalhes">
+          <div class="texto-preview">
+            <p class="projeto-descricao">O 10º Circuito Vozes do Corpo, promovido pela Cia Sansacroma, é um projeto de dança que utiliza a arte como ferramenta de inclusão e de valorização das culturas periféricas.</p>
+          </div>
+          <div class="texto-completo" style="display: none;">
+            <p class="projeto-descricao">O 10º Circuito Vozes do Corpo, promovido pela Cia Sansacroma, é um projeto de dança que utiliza a arte como ferramenta de inclusão e de valorização das culturas periféricas. O evento, que celebra uma década de existência, tem como foco a circulação de espetáculos e a realização de atividades formativas em diferentes espaços culturais de São Paulo, especialmente aqueles localizados em áreas com pouca infraestrutura artística.</p>
+            <p style="margin-top: 0.8rem; color: #6a6a6a; font-size: 0.9rem; font-style: italic;">Anos trabalhados: 2021</p>
+          </div>
+          <button class="btn-ver-mais" onclick="toggleTexto(this)">Ver mais</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projeto 6: Lei Aldir Blanc -->
+    <div class="projeto">
+      <div class="projeto-logo">
+        <img src="editais/lei_de_aldelain.jpg" alt="Logo Lei Aldir Blanc">
+      </div>
+      <div class="projeto-conteudo">
+        <h3>Lei Aldir Blanc</h3>
+        <div class="projeto-detalhes">
+          <div class="texto-preview">
+            <p class="projeto-descricao">A Lei nº 14.017/2020, popularmente conhecida como Lei Aldir Blanc, foi um importante marco para o setor cultural brasileiro, criado em 2020 em resposta à pandemia de COVID-19.</p>
+          </div>
+          <div class="texto-completo" style="display: none;">
+            <p class="projeto-descricao">A Lei nº 14.017/2020, popularmente conhecida como Lei Aldir Blanc, foi um importante marco para o setor cultural brasileiro, criado em 2020 em resposta à pandemia de COVID-19. A lei tinha como objetivo principal destinar auxílio financeiro emergencial a trabalhadores da cultura, espaços artísticos e culturais, microempresas e pequenas empresas culturais, cooperativas, instituições e organizações culturais comunitárias que foram diretamente afetadas pela crise sanitária.</p>
+            <p style="margin-top: 0.8rem; color: #6a6a6a; font-size: 0.9rem; font-style: italic;">Anos trabalhados: 2020</p>
+          </div>
+          <button class="btn-ver-mais" onclick="toggleTexto(this)">Ver mais</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projeto 7: Fomento ao Forró -->
+    <div class="projeto">
+      <div class="projeto-logo">
+        <img src="editais/forro.jpg" alt="Logo Fomento ao Forró">
+      </div>
+      <div class="projeto-conteudo">
+        <h3>Fomento ao Forró</h3>
+        <div class="projeto-detalhes">
+          <div class="texto-preview">
+            <p class="projeto-descricao">Fomento ao Forró lançado pela Secretaria Municipal de Cultura de São Paulo. O objetivo do programa é apoiar e incentivar a pesquisa e o trabalho contínuo, além de promover novas ações e atividades para a linguagem forrozeira na cidade.</p>
+          </div>
+          <div class="texto-completo" style="display: none;">
+            <p class="projeto-descricao">Fomento ao Forró lançado pela Secretaria Municipal de Cultura de São Paulo. O objetivo do programa é apoiar e incentivar a pesquisa e o trabalho contínuo, além de promover novas ações e atividades para a linguagem forrozeira na cidade.</p>
+            <p style="margin-top: 0.8rem; color: #6a6a6a; font-size: 0.9rem; font-style: italic;">Anos trabalhados: 2025</p>
+          </div>
+          <button class="btn-ver-mais" onclick="toggleTexto(this)">Ver mais</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projeto 8: Secretaria Municipal de Cultura de São Paulo -->
+    <div class="projeto">
+      <div class="projeto-logo">
+        <img src="editais/sao_paulo.png" alt="Logo Secretaria Municipal de Cultura de São Paulo">
+      </div>
+      <div class="projeto-conteudo">
+        <h3>Secretaria Municipal de Cultura de São Paulo</h3>
+        <div class="projeto-detalhes">
+          <div class="texto-preview">
+            <p class="projeto-descricao">A Secretaria Municipal de Cultura de São Paulo está com uma programação de editais de difusão para 2025, com o objetivo de descentralizar o acesso à cultura e fomentar a atividade artística na cidade.</p>
+          </div>
+          <div class="texto-completo" style="display: none;">
+            <p class="projeto-descricao">A Secretaria Municipal de Cultura de São Paulo está com uma programação de editais de difusão para 2025, com o objetivo de descentralizar o acesso à cultura e fomentar a atividade artística na cidade. Esses editais contemplam diversas linguagens, como música, teatro, dança, circo e artes visuais.</p>
+            <p style="margin-top: 0.8rem; color: #6a6a6a; font-size: 0.9rem; font-style: italic;">Anos trabalhados: 2025</p>
+          </div>
+          <button class="btn-ver-mais" onclick="toggleTexto(this)">Ver mais</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+        
+        
+
+  
