@@ -1,0 +1,605 @@
+
+/* Componentes - Carregado sob demanda */
+.professores-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+@media (min-width: 1200px) {
+  .professores-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+  }
+}
+
+.professor {
+  background: #c7c7c7;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e0e0e0;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+}
+
+.professor::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(26, 26, 26, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.professor:hover::before {
+  opacity: 1;
+}
+
+.professor:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border-color: #1a1a1a;
+}
+
+.professor-avatar {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1.5rem;
+}
+
+.professor img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #1a1a1a;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel-container img {
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.professor:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.professor-info {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.professor h3 {
+  margin: 0 0 0.8rem 0;
+  color: #1a1a1a;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.professor-disciplina {
+  background: rgba(26, 26, 26, 0.1);
+  color: #1a1a1a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid rgba(26, 26, 26, 0.2);
+  display: inline-block;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.professor:hover .professor-disciplina {
+  background: rgba(26, 26, 26, 0.15);
+  border-color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.professor-detalhes {
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  flex: 1;
+  min-height: 120px;
+}
+
+.professor-experiencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  color: #6a6a6a;
+  font-size: 0.85rem;
+}
+
+.btn-ver-mais {
+  background: rgba(26, 26, 26, 0.1);
+  color: #1a1a1a;
+  border: 1px solid rgba(26, 26, 26, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.btn-ver-mais:hover {
+  background: rgba(26, 26, 26, 0.15);
+  border-color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.professor-acoes {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.btn-trabalhos,
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(26, 26, 26, 0.2);
+}
+
+.btn-trabalhos {
+  background: #1a1a1a;
+  color: white;
+}
+
+.btn-trabalhos:hover {
+  background: #2a2a2a;
+  border-color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-instagram {
+  background: #c7c7c7;
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.btn-instagram:hover {
+  background: #1a1a1a;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar retangular para atividades */
+.professor-avatar-retangular {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #1a1a1a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Carrossel de imagens */
+.carrossel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carrossel-imagens {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carrossel-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 0;
+  will-change: opacity;
+}
+
+.carrossel-img.active {
+  opacity: 1;
+}
+
+.carrossel-navegacao {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.carrossel-btn {
+  background: rgba(26, 26, 26, 0.8);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  backdrop-filter: blur(2px);
+}
+
+.carrossel-btn:hover {
+  background: #1a1a1a;
+  transform: scale(1.1);
+}
+
+.carrossel-indicadores {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicador.active {
+  background: #1a1a1a;
+  transform: scale(1.2);
+}
+
+.indicador:hover {
+  background: rgba(26, 26, 26, 0.8);
+}
+
+/* Modal */
+.modal-content-trabalhos {
+  position: relative;
+  max-width: 90%;
+  max-height: 85vh;
+  background: #c7c7c7;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid #1a1a1a;
+  animation: modalZoom 0.3s ease;
+  overflow-y: auto;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Melhorar botão de fechar no mobile */
+.modal-content-trabalhos .modal-close {
+  position: sticky;
+  top: -2rem;
+  right: -2rem;
+  float: right;
+  margin-bottom: 1rem;
+  z-index: 10;
+}
+
+@keyframes modalZoom {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Modal para imagens do carrossel */
+.modal-content-imagem {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: #c7c7c7;
+  border-radius: 20px;
+  padding: 0;
+  border: 2px solid #1a1a1a;
+  animation: modalZoom 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões de navegação no modal */
+.modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(26, 26, 26, 0.8);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-nav-btn:hover {
+  background: #1a1a1a;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modal-prev {
+  left: 20px;
+}
+
+.modal-next {
+  right: 20px;
+}
+
+.modal-imagem-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal-imagem-container img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  transition: opacity 0.15s ease;
+  will-change: opacity;
+  image-rendering: auto;
+}
+
+.modal-creditos {
+  padding: 1.5rem 2rem;
+  background: #c7c7c7;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.modal-creditos h4 {
+  color: #1a1a1a;
+  margin: 0 0 0.8rem 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.modal-creditos p {
+  color: #6a6a6a;
+  margin: 0;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.modal-creditos p::before {
+  content: "📸 ";
+  margin-right: 0.5rem;
+}
+
+/* Indicador de carregamento no modal */
+.modal-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(26, 26, 26, 0.9);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  z-index: 20;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Cursor pointer para imagens clicáveis do carrossel */
+.carrossel-img {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carrossel-img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+/* Responsivo para componentes */
+@media (max-width: 768px) {
+  .professores-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem 0;
+    max-width: 100%;
+  }
+
+  .professor {
+    padding: 1.5rem;
+    margin: 0 auto;
+    max-width: 400px;
+    min-height: 500px;
+  }
+
+  .professor img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .professor-avatar-retangular {
+    height: 160px;
+    border: 2px solid #1a1a1a;
+  }
+
+  .carrossel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .professor-acoes {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .btn-trabalhos,
+  .btn-instagram {
+    min-width: 140px;
+    justify-content: center;
+  }
+
+  /* Ajustar modal de trabalhos/detalhes no mobile */
+  .modal-content-trabalhos {
+    max-width: 95%;
+    max-height: 80vh;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .modal-content-trabalhos h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .trabalho-item,
+  .detalhe-item {
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .trabalho-item h4,
+  .detalhe-item h4 {
+    font-size: 1rem;
+  }
+
+  .trabalho-item p,
+  .detalhe-item p {
+    font-size: 0.85rem;
+  }
+
+  .atividade-completa {
+    max-height: 60vh;
+  }
+
+  .atividade-completa h4 {
+    font-size: 1rem;
+  }
+
+  .atividade-completa p {
+    font-size: 0.85rem;
+  }
+
+  .elementos-tecnicos .elemento {
+    padding: 0.6rem;
+  }
+
+  .modal-content-imagem {
+    max-width: 95%;
+    max-height: 85%;
+  }
+
+  .modal-creditos {
+    padding: 1rem 1.5rem;
+  }
+
+  .modal-creditos h4 {
+    font-size: 1.1rem;
+  }
+
+  .modal-creditos p {
+    font-size: 0.9rem;
+  }
+
+  .modal-imagem-container img {
+    max-height: 60vh;
+  }
+
+  .modal-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .modal-prev {
+    left: 10px;
+  }
+
+  .modal-next {
+    right: 10px;
+  }
+}
